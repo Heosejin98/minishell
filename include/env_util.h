@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.h                                        :+:      :+:    :+:   */
+/*   env_util.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 11:19:24 by seheo             #+#    #+#             */
-/*   Updated: 2022/10/01 14:42:41 by seheo            ###   ########.fr       */
+/*   Created: 2022/10/01 11:19:16 by seheo             #+#    #+#             */
+/*   Updated: 2022/10/01 12:21:51 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINISHELL_H
-# define MINISHELL_H
+#ifndef ENV_UTIL_H
+# define ENV_UTIL_H
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdio.h>
-# include <signal.h>
-# include <stdbool.h>
-# include "../lib/libft.h"
-# include "error_util.h"
-# include <readline/readline.h>
-# include <readline/history.h>
-
-void	signals_handler(void);
+typedef struct s_env
+{
+	char	**envp;
+	char	**env_var;
+	char	*pwd;
+	char	*oldpwd;
+}			t_env;
 
 #endif

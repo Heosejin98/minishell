@@ -1,18 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/01 10:57:10 by seheo             #+#    #+#             */
+/*   Updated: 2022/10/01 12:33:43 by seheo            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-
-#include "../include/minishell.h"
+#include "minishell.h"
 
 int	main(int argc, char *argv[], char *envp[])
 {
-	char			*str;
+	char	*str;
 
-    (void)envp;
+	signals_handler();
+	(void) envp;
 	if (!argc && !argv)
 		return (0);
 	while (1)
 	{
 		str = readline("minishell$> ");
-        if(str == NULL)
-            return (1);
+		if (str == NULL)
+			return (1);
 	}
 }
