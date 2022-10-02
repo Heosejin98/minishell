@@ -6,13 +6,14 @@
 #    By: seheo <seheo@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/01 11:09:58 by seheo             #+#    #+#              #
-#    Updated: 2022/10/01 14:58:18 by seheo            ###   ########.fr        #
+#    Updated: 2022/10/02 18:23:12 by seheo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # COMMANDS & FLAGS
 CC = gcc
-CC_FLAGS = -Wall -Werror -Wextra
+#CC_FLAGS = -Wall -Werror -Wextra -g3
+CC_FLAGS = -g3
 INCLUDE_FLAGS = -I ./include/ -I $(LIBFT_PATH)include/
 L_FLAGS = -lreadline
 READLINE = -L /Users/$(USER)/.brew/opt/readline/lib
@@ -27,15 +28,20 @@ LIBFT_NAME = $(LIBFT_PATH)/libft.a
 SRC_PATH = ./src/
 OBJ_PATH = ./obj/
 LIBFT_PATH = ./lib/
-BRAIN_PATH = $(SRC_PATH)brain/
+BRAIN_PATH = $(SRC_PATH)decoder/
 LEXER_UTILS_PATH = $(BRAIN_PATH)utils/lexer_utils/
-BRAIN_GETTER_SETTER_PATH = $(BRAIN_PATH)utils/getter_setter/
+DEOCDER_GETTER_SETTER_PATH = $(BRAIN_PATH)util/getter_setter/
 PARSER_UTILS_PATH = $(BRAIN_PATH)utils/parser_utils/
 EXPANDER_UTILS_PATH = $(BRAIN_PATH)utils/expander_utils/
 
 # FILES
 SRC = $(SRC_PATH)main.c \
-		$(SRC_PATH)util/signal_handler.c $(SRC_PATH)util/error_util.c
+		$(SRC_PATH)util/signal_handler.c \
+		$(SRC_PATH)util/error_util.c \
+		$(SRC_PATH)util/env_util.c \
+		$(DEOCDER_GETTER_SETTER_PATH)envp_get_set.c\
+		$(DEOCDER_GETTER_SETTER_PATH)envv_get_set.c\
+		
 OBJ = $(patsubst $(SRC_PATH)%.c, $(OBJ_PATH)%.o, $(SRC))
 LIBFT_SRC = $(LIBFT_PATH)*.c
 

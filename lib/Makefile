@@ -6,7 +6,7 @@
 #    By: seheo <seheo@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/14 08:55:41 by seheo             #+#    #+#              #
-#    Updated: 2022/08/03 15:50:35 by seheo            ###   ########.fr        #
+#    Updated: 2022/10/02 15:48:31 by seheo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,8 +51,11 @@ SRC			=	ft_bzero.c\
 				ft_strtrim.c\
 				ft_substr.c\
 				ft_tolower.c\
-				ft_toupper.c \
-				ft_strcmp.c
+				ft_toupper.c\
+				ft_strcmp.c\
+				ft_double_strlen.c\
+				ft_double_strdup.c
+				
 
 SRCS_BONUS	=	ft_lstadd_back.c\
 				ft_lstadd_front.c\

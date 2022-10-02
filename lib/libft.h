@@ -6,7 +6,7 @@
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 22:28:59 by sejin             #+#    #+#             */
-/*   Updated: 2022/07/28 18:08:39 by seheo            ###   ########.fr       */
+/*   Updated: 2022/10/02 15:45:35 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,9 @@ char	*ft_strrchr(const char *d, int c);
 char	*ft_strnstr(const char *dest, const char *src, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strcmp(const char *s1, const char *s2);
+
+int		ft_double_strlen(char **arr);
+char	**ft_double_strdup(char **arr);
 
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);

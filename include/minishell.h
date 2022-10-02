@@ -6,7 +6,7 @@
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 11:19:24 by seheo             #+#    #+#             */
-/*   Updated: 2022/10/01 14:42:41 by seheo            ###   ########.fr       */
+/*   Updated: 2022/10/02 18:25:06 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 # include <stdbool.h>
 # include "../lib/libft.h"
 # include "error_util.h"
+# include "env_util.h"
+# include "decoder.h"
 # include <readline/readline.h>
 # include <readline/history.h>
 

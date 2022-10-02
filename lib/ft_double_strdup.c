@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   env_util.h                                         :+:      :+:    :+:   */
+/*   ft_double_strdup.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 11:19:16 by seheo             #+#    #+#             */
-/*   Updated: 2022/10/02 18:13:03 by seheo            ###   ########.fr       */
+/*   Created: 2022/10/02 15:24:00 by seheo             #+#    #+#             */
+/*   Updated: 2022/10/02 15:29:33 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ENV_UTIL_H
-# define ENV_UTIL_H
+#include "libft.h"
 
-typedef struct s_env
+char	**ft_double_strdup(char **arr)
 {
-	char	**envp;
-	char	**env_var;
-	char	*pwd;
-	char	*oldpwd;
-}			t_env;
+	char	**cpy;
+	int		i;
 
-//env_util
-t_env	*init_envv(char **envp);
-char	*get_env_var_value(t_env *envv, char *var);
-//void	free_envv(t_env *envv);
-//int		reinit_env_var(t_env *envv, char **argv);
-
-//env_controller
-void	set_envv(t_env *envv);
-t_env	*get_envv(void);
-char	**get_env_var(void);
-
-
-#endif
+	if (arr == NULL)
+		return (NULL);
+	cpy = ft_calloc(ft_double_strlen(arr) + 1, sizeof(*cpy));
+	if (cpy == NULL)
+		return (NULL);
+	i = 0;
+	while (arr[i])
+	{
+		cpy[i] = ft_strdup(arr[i]);
+		i++;
+	}
+	return (cpy);
+}

@@ -6,7 +6,7 @@
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 12:53:39 by seheo             #+#    #+#             */
-/*   Updated: 2022/10/02 12:53:44 by seheo            ###   ########.fr       */
+/*   Updated: 2022/10/02 18:25:25 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <sys/types.h>
 # include <stdbool.h>
 
-typedef enume_parser_tok_type
+typedef enum e_parser_tok_type
 {
 	std = 0,
 	subshell = 1,
@@ -63,5 +63,10 @@ typedef struct s_expander_tokens
 	int				out;
 	bool			is_pipe;
 }	t_exp_tok;
+
+//Getter Setter
+void		set_envp(char *envp[]);
+char		**get_envp(void);
+void		reset_envp(void);
 
 #endif
